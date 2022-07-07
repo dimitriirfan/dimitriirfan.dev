@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBars, faChevronLeft, faClose, faChevronDown} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion, AnimatePresence, m } from "framer-motion"
+import { motion } from "framer-motion"
 
 const NavbarWeb = () => {
     const [isShowMicro, seIsShowMicro] = useState(false)
@@ -97,6 +97,7 @@ const NavbarWeb = () => {
     return (
         <>
             <motion.div
+                initial={false}
                 variants={bubbleVariants}
                 animate={isShowNav ? "expand" : "initial"}
                 className='fixed bg-black w-64 h-64 -right-36 -bottom-36 cursor-pointer rounded-full scale-0'
@@ -104,6 +105,7 @@ const NavbarWeb = () => {
             </motion.div>
             <motion.div 
                 id='navbar' 
+                initial={false}
                 variants={navVariants}
                 animate={isShowNav ? "open" : "close"}
                 className='fixed top-0 h-screen w-screen bg-black z-50 flex-col flex items-end justify-end p-8 py-16 gap-4 font-medium text-white'>
@@ -125,19 +127,22 @@ const NavbarWeb = () => {
                     <a onClick={handleToggleBlogs} className=''>Blogs</a>
                 </span>
                 <motion.div
+                    initial={false}
                     variants={blogVariants}
                     animate={isShowBlogs ? "open" : 'close'}
                 >
                     <Link href='/'>
-                        <a className='cursor-pointer transition ease-in-out text-lg font-normal hover:text-red-500'>Kereta 🚅</a>
+                        
+                        <a className='cursor-pointer transition ease-in-out text-lg font-normal hover:text-red-500 border-r-2 pr-4'>Kereta 🚅</a>
                     </Link>
                 </motion.div>
                 <motion.div
+                    initial={false}
                     variants={blogVariants}
                     animate={isShowBlogs ? "open" : 'close'}
                 >
                     <Link href='/'>
-                        <a className='cursor-pointer transition ease-in-out text-lg font-normal hover:text-red-500'>Fotografi 📸</a>
+                        <a className='cursor-pointer transition ease-in-out text-lg font-normal hover:text-red-500 border-r-2 pr-4'>Fotografi 📸</a>
                     </Link>
                 </motion.div>
            
@@ -146,6 +151,7 @@ const NavbarWeb = () => {
                 </Link>
             </motion.div>
             <motion.div 
+                initial={false}
                 id='micro-1'
                 variants={microVariants}
                 animate={isShowMicro ? "open" : "close"}

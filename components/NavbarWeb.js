@@ -16,7 +16,7 @@ const NavbarWeb = () => {
     }
 
     return (
-        <div className='container flex justify-between p-4 font-medium sticky top-0 bg-white items-center'>
+        <div className='container mx-auto flex justify-between p-4 md:px-32 font-medium sticky top-0 bg-white items-center'>
             <Link href=''>
                 <p className='p-1 cursor-pointer text-lg'>🎯 dimitriirfan.dev</p>
             </Link>
@@ -41,6 +41,7 @@ const NavbarWeb = () => {
                     </span>
                     <motion.div 
                         id='blog' 
+                        initial={false}
                         animate={{ x: isOpenBlog ? -100 : -70, opacity: isOpenBlog ? 1 : 0, type: "spring"}}
                         className='shadow-sm duration-400 bg-white absolute w-48 p-2 flex flex-col rounded-lg border border-neutral-800'
                     >
