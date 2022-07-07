@@ -8,23 +8,10 @@ const NavbarWeb = () => {
 
     const [isOpenBlog, setOpenBlog] = useState(false) 
     const handleOpenBlog = () => {
-
-        if (!isOpenBlog) {
-            // document.getElementById('blog').classList.add('top-12')
-            // document.getElementById('blog').classList.add('opacity-100')
-            // document.getElementById('blog').classList.remove('-top-32')
-            // document.getElementById('blog').classList.remove('opacity-0')
-        } else {
-            // document.getElementById('blog').classList.remove('opacity-100')
-            // document.getElementById('blog').classList.remove('top-12')
-            // document.getElementById('blog').classList.add('opacity-0')
-            // document.getElementById('blog').classList.add('-top-32')
-        }
-
-        setOpenBlog(!isOpenBlog)
+        setOpenBlog(true)
     }
     const handleCloseBlog = () => {
-        setOpenBlog(!isOpenBlog)
+        setOpenBlog(false)
 
     }
 
@@ -41,10 +28,13 @@ const NavbarWeb = () => {
                 <Link href='/about'>
                     <a className='p-1 cursor-pointer border-b-2 border-white hover:border-red-500 transition ease-in-out text-lg'>About</a>
                 </Link>
-                <div className='relative'>
+                <div 
+                    className='relative'
+                    onMouseEnter={handleOpenBlog}
+                    onMouseLeave={handleCloseBlog}
+                >
                     <span 
                         className='p-1 cursor-pointer border-b-2 border-white hover:border-red-500 transition ease-in-out inline-flex gap-3 items-center text-lg'
-                        onClick={handleOpenBlog}
                     >
                         <p className='' >Blogs</p>
                         <FontAwesomeIcon icon={faChevronDown} />
@@ -52,7 +42,7 @@ const NavbarWeb = () => {
                     <motion.div 
                         id='blog' 
                         animate={{ x: isOpenBlog ? -100 : -70, opacity: isOpenBlog ? 1 : 0, type: "spring"}}
-                        className='shadow-sm duration-400 bg-white absolute top-12 w-48 p-2 flex flex-col rounded-lg border border-neutral-800'
+                        className='shadow-sm duration-400 bg-white absolute w-48 p-2 flex flex-col rounded-lg border border-neutral-800'
                     >
                         <Link href=''>
                             <a className='w-full p-2 hover:border-r-2 border-gray-900'>Kereta 🚅</a>
