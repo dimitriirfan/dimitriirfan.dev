@@ -2,6 +2,7 @@ import NavbarMobile from "../components/NavbarMobile";
 import NavbarWeb from "../components/NavbarWeb";
 import ProjectCard from "../components/ProjectCard";
 import { motion } from "framer-motion"
+import Footer from "../components/Footer";
 
 export default function Projects() {
     return (
@@ -26,6 +27,8 @@ export default function Projects() {
 
                         </div>
                     </motion.div>
+                    <Footer />
+
             </div>
             <NavbarMobile />
         

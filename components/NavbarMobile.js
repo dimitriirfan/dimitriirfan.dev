@@ -163,7 +163,7 @@ const NavbarWeb = () => {
                     onMouseEnter={ () => handleOnMouseEnter()}
                     onMouseLeave={ () => handleOnMouseLeave()} 
                     onClick={ () => handleShowNav() }
-                    className='fixed bottom-4 right-4 cursor-pointer rounded-full bg-white sm:hidden grid place-items-center'
+                    className='fixed bottom-4 right-4 cursor-pointer rounded-full bg-white sm:hidden grid place-items-center shadow-xl border-gray-100'
                 >
                     <FontAwesomeIcon className='transition-all ease-out p-4 fa-2xl ' icon={isShowMicro ? faChevronLeft : faBars} />
                 </div>

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const ProjectCard = (_) => {
     const props = {
@@ -10,7 +11,9 @@ const ProjectCard = (_) => {
         }
     }
     return (
-        <div className="relative border-2 border-gray-100 flex-col bg-white shadow-sm">
+        <motion.div
+            className="relative border-2 border-gray-100 flex-col bg-white shadow-sm cursor-pointer"
+        >
             <div className="relative h-56">
                 <Image 
                     src={props.data.src}
@@ -30,7 +33,7 @@ const ProjectCard = (_) => {
             <div className="absolute top-0 left-0 w-16 h-16 bg-red-500 grid place-items-center text-xl font-semibold text-white rounded-br-2xl">
                 #{props.data.num}
             </div>
-        </div>
+        </motion.div>
     )
 }
 
