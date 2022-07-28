@@ -29,7 +29,7 @@ export default function Home() {
                                 <div>
                                         <p className=''>
                                             I am a person with a <b className='font-medium'>passion to learn something new</b>. Strong logical skill, and
-                                            an effective problem-solving skill. A patient person in almost everything. I am also a coding geek (preferably called <b className='font-medium'>tech savvy</b>), once I'm hooked into a coding project, it's hard for me
+                                            an effective problem-solving skill. A patient person in almost everything. I am also a coding geek (preferably called <b className='font-medium'>tech savvy</b>), once I&apos;m hooked into a coding project, it&apos;s hard for me
                                             to stop.
                                         </p>
                                 </div>

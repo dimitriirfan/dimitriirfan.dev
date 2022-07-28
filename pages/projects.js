@@ -25,7 +25,7 @@ export default function Projects() {
                                 <H1>🕹 Projects</H1>
                                 <p>A curated lists of my favorite side projects. This list may not complete, for full lists of my projects you can visit my <a target="_blank" href='https://github.com/dimitriirfan' rel="noopener noreferrer" className="border-b border-gray-900">github</a> page</p>
 
-                                <Quote >"It ain't much, but it's an honest works" -a meme</Quote>
+                                <Quote >&quot;It ain&apos;t much, but it&apos;s an honest works&quot; -a meme</Quote>
 
                             </div>
                             <div className="container flex flex-col gap-8">
