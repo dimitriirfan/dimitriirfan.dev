@@ -8,6 +8,7 @@ import H3 from "../components/typography/H3"
 import P from "../components/typography/P"
 import Quote from "../components/typography/Quote"
 import ExperienceCard from "../components/ExperienceCard"
+import Image from "next/image"
 
 const About = () => {
     return (
@@ -21,16 +22,17 @@ const About = () => {
                 >
                     {/* md:items-center md:flex-row md:px-32 */}
                     <div className='container mx-auto flex flex-col justify-center max-w-5xl gap-8 py-16 pb-32 p-4 text-gray-800'>
-                        <div className="self-center">
-                            <img className="h-80" src="/images/photo-dimitri.jpg"></img>
+                        <div className="self-center h-80">
+                            <Image alt="foto dimitri" src="/images/photo-dimitri.jpg" height="300" width="300" />
+                            {/* <img className="" src="/images/photo-dimitri.jpg"></img> */}
                             <p className="text-center text-gray-500 mt-1">Picture of me at 22 years old :D</p>
                         </div>
                         
                         <hr></hr>
                         <H2>About</H2>
                         <P>
-                            Hi!, I'm Dimitri Irfan, you can call me Dimitri, Dim, or Mit whichever you prefer. 
-                            I'm currently a final year student who already finished my undergraduate thesis in Telkom University Bandung.
+                            Hi!, I&apos;m Dimitri Irfan, you can call me Dimitri, Dim, or Mit whichever you prefer. 
+                            I&apos;m currently a final year student who already finished my undergraduate thesis in Telkom University Bandung.
                             I have an interest in Software Engineering, and Product Development. Building products that actually matters is what I keen for
                         </P>
                         <P>
@@ -45,15 +47,15 @@ const About = () => {
                         <P>I do games, sports, code, etc. etc.</P>
                         
                         <H3>Projects</H3>
-                        <Quote >"It ain't much, but it's an honest works" -a meme</Quote>
+                        <Quote >`&quot;`It ain&apos;t much, but it&apos;s an honest works`&quot;` -a meme</Quote>
                         <P>
-                            Throughout my college years I've done several software projects, be it side projects, client projects, or college projects.
+                            Throughout my college years I&apos;ve done several software projects, be it side projects, client projects, or college projects.
                             You can see my curated projects in the <Link href='/projects'><a className="border-b border-gray-900">projects page </a></Link> 
                             or you can go to my <a target="_blank" href='https://github.com/dimitriirfan' rel="noopener noreferrer" className="border-b border-gray-900">github</a> for more complete project lists.
                         </P>
                         <P>
-                            Most of the time I do frontend and backend, but frontend is where I'm currently confident with my skills but that doesn't mean I
-                            left my backend skills for good. I also have a interest in backend kinda things, currently I'm learning to create microservice REST API using Golang with midtrans payment services.
+                            Most of the time I do frontend and backend, but frontend is where I`&quot;`m currently confident with my skills but that doesn&apos;t mean I
+                            left my backend skills for good. I also have a interest in backend kinda things, currently I`&quot;`m learning to create microservice REST API using Golang with midtrans payment services.
                         </P>
                         <hr></hr>
                         <H2>Professional Experience</H2>

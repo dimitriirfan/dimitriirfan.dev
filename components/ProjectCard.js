@@ -17,8 +17,8 @@ const ProjectCard = (props) => {
                 <div className="absolute left-0 top-0 w-12 h-12 bg-red-500 grid place-items-center text-white font-semibold text">
                     {props.item+1}
                 </div>
-                <div className="p-4 max-w-sm max-h-sm">
-                    <img className="" src={props.data.src}></img>
+                <div className="max-w-sm max-h-sm relative w-2/3 h-56">
+                    <Image alt="foto dimitri" src={props.data.src} layout="fill" objectFit="contain" />
                 </div>
                 <div className="p-8 flex flex-col w-full">
                     <div className="flex flex-col gap-2">
