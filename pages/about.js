@@ -23,7 +23,7 @@ const About = () => {
                     {/* md:items-center md:flex-row md:px-32 */}
                     <div className='container mx-auto flex flex-col justify-center max-w-5xl gap-8 py-16 pb-32 p-4 text-gray-800'>
                         <div className="self-center h-80">
-                            <Image alt="foto dimitri" src="/images/photo-dimitri.jpg" height="300" width="300" />
+                            <Image alt="foto dimitri" src="/static/images/photo-dimitri.jpg" height="300" width="300" />
                             {/* <img className="" src="/images/photo-dimitri.jpg"></img> */}
                             <p className="text-center text-gray-500 mt-1">Picture of me at 22 years old :D</p>
                         </div>

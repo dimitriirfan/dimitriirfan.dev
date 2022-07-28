@@ -50,7 +50,7 @@ export default function Projects() {
 
 const projects = [
     {
-        src:"/images/projects-sorting.png",
+        src:"/static/images/projects-sorting.jpg",
         name: "Sorting Visualization",
         description: "Sorting visualization using react js, using insertion and selection sorting algorithms",
         date: "Feb 2021",
@@ -66,7 +66,7 @@ const projects = [
     },
 
     {
-        src:"/images/projects-ner-annotation.png",
+        src:"/static/images/projects-ner-annotation.jpg",
         name: "NER Annotation Tool",
         description: "As the name suggests, it's a tool for text sequence annotation, especially word tagging. Currently only support word by word tagging",
         date: "Oct 2021",
@@ -82,7 +82,7 @@ const projects = [
     },
 
     {
-        src:"/images/projects-bwa-backer-fe.png",
+        src:"/static/images/projects-bwa-backer-fe.jpg",
         name: "BWA Backer Project Front End",
         description: "Part of Build with Angga project course, instead of using Vue.js as a FE framework I use Next.js with Tailwind",
         date: "Jul 2022",
@@ -99,7 +99,7 @@ const projects = [
     },
 
     {
-        src:"/images/projects-bwa-backer-fe.png",
+        src:"/static/images/projects-bwa-backer-fe.jpg",
         name: "BWA Backer Project Back End",
         description: "Part of Build with Angga project course, creating REST API services for Backer website and also provide Midtrans payment services using Golang",
         date: "Jul 2022",
@@ -117,7 +117,7 @@ const projects = [
     },
 
     {
-        src:"/images/projects-kosutan.png",
+        src:"/static/images/projects-kosutan.jpg",
         name: "Kosutan",
         description: "Software Engineering course final project, building a platform for people who wanted to rent Kosts. Developed using React.js, and Express",
         date: "Jun 2021",

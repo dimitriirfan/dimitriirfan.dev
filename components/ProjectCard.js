@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons"
 
 const ProjectCard = (props) => {
-    console.log('$data')
     return (
         <>
             <motion.div
