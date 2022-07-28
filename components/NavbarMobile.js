@@ -23,12 +23,14 @@ const NavbarWeb = () => {
 
     }
 
-    const handleCloseNav = () => {
+    const handleCloseNav = (e) => {
+        e.stopPropagation()
         setIsShowNav(false)
         setIsShowBlogs(false)
     }
 
-    const handleToggleBlogs = () => {
+    const handleToggleBlogs = (e) => {
+        e.stopPropagation()
         setIsShowBlogs(!isShowBlogs)
     }
 
@@ -100,31 +102,32 @@ const NavbarWeb = () => {
                 initial={false}
                 variants={bubbleVariants}
                 animate={isShowNav ? "expand" : "initial"}
-                className='fixed bg-black w-64 h-64 -right-36 -bottom-36 cursor-pointer rounded-full scale-0'
+                className='fixed bg-black w-64 h-64 -right-36 -bottom-36 cursor-pointer rounded-full scale-0 z-40'
             >
             </motion.div>
             <motion.div 
+                onClick={handleCloseNav}
                 id='navbar' 
                 initial={false}
                 variants={navVariants}
                 animate={isShowNav ? "open" : "close"}
-                className='fixed top-0 h-screen w-screen bg-black z-50 flex-col flex items-end justify-end p-8 py-16 gap-4 font-medium text-white'>
+                className='fixed top-0 h-screen w-screen bg-black z-40 flex-col flex items-end justify-end p-8 py-16 gap-4 font-medium text-white'>
                 <div className='cursor-pointer'>
                     <FontAwesomeIcon 
                         className='transition-all ease-out fa-2xl hover:text-red-500' 
                         icon={faClose} 
-                        onClick={() => handleCloseNav()}
+                        onClick={handleCloseNav}
                     />
                 </div>
                 <Link href='/'>
-                    <a className='cursor-pointer transition ease-in-out text-2xl hover:text-red-500'>Home</a>
+                    <a className='cursor-pointer transition ease-in-out text-2xl hover:text-red-500 '>Home</a>
                 </Link>
                 <Link href='/about'>
                     <a className='cursor-pointer transition ease-in-out text-2xl hover:text-red-500'>About</a>
                 </Link>
-                <span className='cursor-pointer text-2xl inline-flex gap-3 items-center hover:text-red-500'>
+                <span onClick={handleToggleBlogs}  className='cursor-pointer text-2xl inline-flex gap-3 items-center hover:text-red-500'>
                     <FontAwesomeIcon icon={faChevronDown} />
-                    <a onClick={handleToggleBlogs} className=''>Blogs</a>
+                    <a className=''>Blogs</a>
                 </span>
                 <motion.div
                     initial={false}

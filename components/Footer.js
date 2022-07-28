@@ -4,7 +4,7 @@ import { faCopy } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
     return (
-        <div className='flex flex-col sm:flex-row-reverse sm:justify-center sm:items-center p-4 gap-2 sm:p-4 sm:gap-12'>
+        <div className='flex flex-col sm:flex-row-reverse sm:justify-center sm:items-center p-4 gap-2 sm:p-4 sm:gap-12 bg-white fixed bottom-0 w-full border-t'>
             <div className='flex sm:justify-center sm:items-center text-2xl gap-8 sm:gap-12'>
                 <a target="_blank" href='https://www.instagram.com/dimitriirfann/' rel="noopener noreferrer">
                     <FontAwesomeIcon 

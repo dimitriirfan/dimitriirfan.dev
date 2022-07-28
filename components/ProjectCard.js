@@ -1,39 +1,61 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
+import H3 from "./typography/H3"
+import P from "./typography/P"
+import Tag from "./Tag"
+import TechStack from "./TechStack"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faExternalLink } from "@fortawesome/free-solid-svg-icons"
 
-const ProjectCard = (_) => {
-    const props = {
-        data: {
-            num: 1,
-            src:"/images/projects-sorting.png",
-            description: "PT Pindad, is an Indonesian state-owned enterprise specialising in military and commercial products."
-
-        }
-    }
+const ProjectCard = (props) => {
+    console.log('$data')
     return (
-        <motion.div
-            className="relative border-2 border-gray-100 flex-col bg-white shadow-sm cursor-pointer"
-        >
-            <div className="relative h-56">
-                <Image 
-                    src={props.data.src}
-                    alt='sorting visualization project'
-                    layout="fill"
-                    objectFit="contain"
-                />
-            </div>
-
-            <div className="p-4 border-t-2 border-gray-100 ">
-                <div className="mb-4">
-                    <p className="font-semibold" >Sorting Visualization</p>
-                    <p className="text-gray-500">20 September 2021</p>
+        <>
+            <motion.div
+                className="flex flex-col sm:flex-row justify-center items-center relative p-4 border"
+            >   
+                <div className="absolute left-0 top-0 w-12 h-12 bg-red-500 grid place-items-center text-white font-semibold text">
+                    {props.item+1}
                 </div>
-                <p className="">{props.data.description}</p>
-            </div>
-            <div className="absolute top-0 left-0 w-16 h-16 bg-red-500 grid place-items-center text-xl font-semibold text-white rounded-br-2xl">
-                #{props.data.num}
-            </div>
-        </motion.div>
+                <div className="p-4 max-w-sm max-h-sm">
+                    <img className="" src={props.data.src}></img>
+                </div>
+                <div className="p-8 flex flex-col w-full">
+                    <div className="flex flex-col gap-2">
+                        <div className="border-r border-black">
+                            <H3>{props.data.name}</H3>
+                            <p>{props.data.date}</p>
+                        </div>
+                        <div className="flex flex-wrap mb-4">
+                            <Tag color={`${props.data.tagColor}`}>{props.data.tagStatus}</Tag>
+                        </div>
+                        <div>
+                            <p>{props.data.description}</p> 
+                        </div>
+                    </div>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                        {props.data.techStack && props.data.techStack.map((val, i) => {
+                            return <TechStack key={i}>{val}</TechStack>
+                        })}
+                    </div>
+                    <div className="self-end flex gap-4 mt-4">
+                        {props.data.codeLink && (
+                            <a target="_blank" href={props.data.codeLink} rel="noopener noreferrer" className="inline-flex items-center gap-2 border py-1 px-2 rounded cursor-pointer hover:bg-red-500 hover:text-white font-semibold text-gray-500">
+                                <p>Code</p>
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </a>
+                        )}
+                        {props.data.demoLink && (
+                            <a target="_blank" href={props.data.demoLink} rel="noopener noreferrer" className="inline-flex items-center gap-2 border py-1 px-2 rounded cursor-pointer hover:bg-red-500 hover:text-white font-semibold text-gray-500">
+                                <p>Demo</p>
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </a>
+                        )}
+                    </div>
+                </div>
+            </motion.div>
+        
+        </>
     )
 }
 
