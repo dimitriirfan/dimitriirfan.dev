@@ -80,7 +80,7 @@ export default About
 
 const professionalExperience = [
     {
-        image: "/images/logo-lingotalk.png",
+        image: "/images/logo-lingotalk.jpg",
         companyName: "LingoTalk",
         role: "Software Engineer",
         startDate: "May 2021",
@@ -96,7 +96,7 @@ const professionalExperience = [
     }, 
 
     {
-        image: "/images/logo-telkom.png",
+        image: "/images/logo-telkom.jpg",
         companyName: "Telkom Indonesia",
         role: "Data Scientist",
         startDate: "Jan 2022",
