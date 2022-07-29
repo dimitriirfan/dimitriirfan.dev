@@ -11,7 +11,7 @@ const ProjectCard = (props) => {
     return (
         <>
             <motion.div
-                className="flex flex-col sm:flex-row justify-center items-center relative p-4 border"
+                className="flex flex-col sm:flex-row justify-center items-center relative sm:px-4  border"
             >   
                 <div className="absolute left-0 top-0 w-12 h-12 bg-red-500 grid place-items-center text-white font-semibold text">
                     {props.item+1}
