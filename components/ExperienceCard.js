@@ -17,14 +17,14 @@ const ExperienceCard = (props) => {
                         <span> | </span>
                         <span>{props.data.role}</span>
                     </p>
-                    
+
                     <p>{`${props.data.startDate} - ${props.data.endDate}`}</p>
                     <div className="flex mt-2 gap-1 text-sm flex-wrap">
                         {props.data.techStack && props.data.techStack.map((val, i) => {
                             return <TechStack key={i}>{val}</TechStack>
                         })}
-                        
-                       
+
+
                     </div>
                 </div>
                 <div className="rounded-full w-8 h-8 grid place-items-center">
@@ -33,13 +33,13 @@ const ExperienceCard = (props) => {
             </div>
             {isExpand && (
                 <div className="px-8 py-4">
-                    <p className="font-bold">What i do:</p>
-                    
+                    <p className="font-bold">What I do:</p>
+
                     <ul className="list-disc mt-4 flex flex-col gap-2">
                         {props.data.whatYouDo.map((val, i) => {
                             return <li key={i} >{val}</li>
                         })}
-                    </ul> 
+                    </ul>
                 </div>
             )}
 
